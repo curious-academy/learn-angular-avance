@@ -1,5 +1,5 @@
-import { AfterContentInit, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { changeStateCell, Tile, TileCell } from './models';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Tile, TileCell, changeStateCell } from './models';
 
 @Component({
   selector: 'game-grid',
@@ -7,7 +7,7 @@ import { changeStateCell, Tile, TileCell } from './models';
   styleUrls: ['./grid.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class GridComponent implements OnInit, AfterViewInit, AfterContentInit {
+export class GridComponent {
 
   @Input() set tiles(values: Tile[]) {
     this.cells = values.map(tile => {
@@ -17,29 +17,8 @@ export class GridComponent implements OnInit, AfterViewInit, AfterContentInit {
 
       return cell;
     });
-  };
+  }
   cells: TileCell[] = [];
-
-
-
-  ngAfterContentInit(): void {
-
-  }
-
-  ngAfterViewInit(): void {
-
-  }
-
-
-  ngOnInit(): void {
-
-  }
-
-  logView() {
-  }
-
-  onClick() {
-  }
 
   trackByFn(index: number, item: TileCell) {
     return item.id;

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { GameDto } from '../../../core/models/game.dto';
 
 @Component({
@@ -7,13 +7,9 @@ import { GameDto } from '../../../core/models/game.dto';
   styleUrls: ['./game-table.component.css'],
 //   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GameTableComponent implements OnInit {
+export class GameTableComponent {
   @Input() games: GameDto[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 
 

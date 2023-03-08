@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { GameDto } from '../../../core/models/game.dto';
 
 @Component({
@@ -7,13 +7,8 @@ import { GameDto } from '../../../core/models/game.dto';
   styleUrls: ['./game-row.component.css'],
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GameRowComponent implements OnInit {
+export class GameRowComponent {
   @Input() item!: GameDto;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   get runChangeDetection() {
     console.warn('TodoComponent - Checking the view');

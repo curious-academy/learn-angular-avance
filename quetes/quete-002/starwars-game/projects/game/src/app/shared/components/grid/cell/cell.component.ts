@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { changeStateCell, TileCell } from '../models';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { TileCell, changeStateCell } from '../models';
 
 @Component({
   selector: 'game-cell',
@@ -7,14 +7,9 @@ import { changeStateCell, TileCell } from '../models';
   styleUrls: ['./cell.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class CellComponent implements OnInit {
+export class CellComponent {
 
   @Input() item !: TileCell;
-
-  ngOnInit(): void {
-
-
-  }
 
   logView() {
     console.info('CellComponent');

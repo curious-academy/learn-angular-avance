@@ -9,7 +9,7 @@ export interface TileCell extends Tile {
 }
 
 /** change state and css value of the current cell */
-export const changeStateCell = (cell: TileCell, isRevealed: boolean, clicked: boolean = false) => {
+export const changeStateCell = (cell: TileCell, isRevealed: boolean, clicked = false) => {
   cell.isRevealed = isRevealed;
   cell.css = 'tile';
 

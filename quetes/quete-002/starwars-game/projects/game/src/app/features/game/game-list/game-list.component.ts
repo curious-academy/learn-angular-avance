@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { GameDto } from '../../../core/models/game.dto';
 import { GameService } from '../services/game.service';
 
