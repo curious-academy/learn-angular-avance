@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Observable, Subscription, of } from 'rxjs';
+import { Observable, Subscription, catchError, finalize, map, of, tap } from 'rxjs';
 import { PeopleBusiness } from '../services/businesses/people.business';
 
 @Component({
@@ -13,7 +13,7 @@ import { PeopleBusiness } from '../services/businesses/people.business';
 export class RappelPromiseComponent {
   title = 'Rappel';
   score$ = of(12);
-  people$ = inject(PeopleBusiness).getAll();
+  // people$ = inject(PeopleBusiness).getAll();
   private subscription = new Subscription();
 
   ngOnDestroy(): void {
@@ -26,12 +26,12 @@ export class RappelPromiseComponent {
     const callback = (item: string) => console.info(item);
     const promise = this.getPromise().then(callback);
 
-    const observable$ = new Observable<string>(subscriber => {
+    let observable$ = new Observable<string>(subscriber => {
       console.info('OBSERVABLE 0');
 
       subscriber.next('johny -> OBSERVABLE');
 
-      subscriber.error(new Error());
+      // subscriber.error(new Error());
 
       setTimeout(() => {
         console.info('OBSERVABLE 1', this.title);
@@ -41,6 +41,17 @@ export class RappelPromiseComponent {
 
       subscriber.next('johny -> OBSERVABLE 3');
     });
+
+    observable$ = observable$.pipe(
+      tap(callback),
+      map(item => item + '...'),
+      tap(callback),
+      map(item => item.toLowerCase()),
+      tap(callback),
+      catchError(err => ('ERROR' + err)),
+      finalize(() => console.info('YOUPI c\'est fini'))
+    );
+
     this.subscription.add(
       observable$.subscribe(callback,
                           err => console.error(err),
