@@ -1,0 +1,7 @@
+<button #toClick>Start timer</button>
+
+{{  toLog()}}
+
+<div *ngIf="timer$ | async as timer">
+  {{ timer }}
+</div>

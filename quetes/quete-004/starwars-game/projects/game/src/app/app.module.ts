@@ -8,6 +8,7 @@ import { GameModule } from './features/game/game.module';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
 import { RappelPromiseComponent } from './learnings/rappel-promise-observable/rappel-promise.component';
+import { FromEventOperatorComponent } from './learnings/from-event-operator/from-event-operator.component';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { RappelPromiseComponent } from './learnings/rappel-promise-observable/ra
     AppRoutingModule,
     HttpClientModule,
     GameModule,
-    RappelPromiseComponent
+    FromEventOperatorComponent
   ],
   providers: [],
   bootstrap: [AppComponent, HeaderComponent, SideBarComponent]
