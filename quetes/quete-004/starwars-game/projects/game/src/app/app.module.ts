@@ -9,6 +9,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
 import { RappelPromiseComponent } from './learnings/rappel-promise-observable/rappel-promise.component';
 import { FromEventOperatorComponent } from './learnings/from-event-operator/from-event-operator.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FromEventOperatorComponent } from './learnings/from-event-operator/from
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     GameModule,
     FromEventOperatorComponent
   ],
