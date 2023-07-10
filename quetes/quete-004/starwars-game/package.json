@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:api": "pm2 restart ../api/long-api/game-api/bin/www",
+    "prestart:apiold": "pm2 delete ../api/long-api/game-api/bin/www",
+    "start:api": "pm2 start ../api/long-api/game-api/bin/www --no-autorestart ",
     "prestart": "npm run start:api",
     "start": "ng serve",
     "build": "ng build",
