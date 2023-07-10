@@ -12,6 +12,8 @@ import { FromEventOperatorComponent } from './learnings/from-event-operator/from
 import { FormsModule } from '@angular/forms';
 import { SubjectAndCoComponent } from './learnings/subject-and-co/subject-and-co.component';
 import { SubjectWithTakeuntilComponent } from './learnings/subject-with-takeuntil/subject-with-takeuntil.component';
+import { BehaviorsubjectAndCoComponent } from './learnings/behaviorsubject-and-co/behaviorsubject-and-co.component';
+import { ObsWithSharereplayComponent } from './learnings/obs-with-sharereplay/obs-with-sharereplay.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { SubjectWithTakeuntilComponent } from './learnings/subject-with-takeunti
     HeaderComponent,
     SideBarComponent,
     SubjectAndCoComponent,
-    SubjectWithTakeuntilComponent
+    SubjectWithTakeuntilComponent,
+    BehaviorsubjectAndCoComponent,
+    ObsWithSharereplayComponent
   ],
   imports: [
     BrowserModule,
