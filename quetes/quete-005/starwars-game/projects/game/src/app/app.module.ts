@@ -14,13 +14,13 @@ import { SubjectAndCoComponent } from './learnings/subject-and-co/subject-and-co
 import { SubjectWithTakeuntilComponent } from './learnings/subject-with-takeuntil/subject-with-takeuntil.component';
 import { BehaviorsubjectAndCoComponent } from './learnings/behaviorsubject-and-co/behaviorsubject-and-co.component';
 import { ObsWithSharereplayComponent } from './learnings/obs-with-sharereplay/obs-with-sharereplay.component';
+import { HeaderModule } from './shared/components/header/header.module';
 // import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     SideBarComponent,
     SubjectAndCoComponent,
     SubjectWithTakeuntilComponent,
@@ -33,6 +33,7 @@ import { ObsWithSharereplayComponent } from './learnings/obs-with-sharereplay/ob
     // SharedModule,
     HttpClientModule,
     FormsModule,
+    HeaderModule,
     GameModule,
     FromEventOperatorComponent
   ],
