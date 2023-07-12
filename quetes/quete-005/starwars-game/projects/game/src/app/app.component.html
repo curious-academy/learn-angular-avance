@@ -1,13 +1,20 @@
 
-<h1>Star wars game</h1>
+<div id="wrapper">
 
-<!-- <game-from-event-operator></game-from-event-operator> -->
+  <!-- Sidebar -->
+  <game-side-bar></game-side-bar>
+  <!-- End of Sidebar -->
 
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
 
-<!-- <game-behaviorsubject-and-co></game-behaviorsubject-and-co> -->
-<!-- <game-subject-and-co></game-subject-and-co>
-<game-subject-with-takeuntil></game-subject-with-takeuntil> -->
-
-<game-user-list></game-user-list>
-
-<router-outlet></router-outlet>
+    <!-- Main Content -->
+    <div id="content">
+      <game-header></game-header>
+      <div class="container-fluid">
+        <h1>Star wars game</h1>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
