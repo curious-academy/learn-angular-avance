@@ -6,6 +6,15 @@
     "game": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "standalone": true
+        },
+        "@schematics/angular:directive": {
+          "standalone": true
+        },
+        "@schematics/angular:pipe": {
+          "standalone": true
+        },
         "@schematics/angular:application": {
           "strict": true
         }

@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { UserListComponent } from './features/user/user-list/user-list.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
+import { DiscoverInjectComponent } from './learnings/discover-inject/discover-inject.component';
 
 @Component({
     selector: 'game-root',
@@ -13,6 +14,7 @@ import { SideBarComponent } from './shared/components/side-bar/side-bar.componen
       HeaderComponent,
       SideBarComponent,
       UserListComponent,
+      DiscoverInjectComponent,
       RouterOutlet
     ]
 })
