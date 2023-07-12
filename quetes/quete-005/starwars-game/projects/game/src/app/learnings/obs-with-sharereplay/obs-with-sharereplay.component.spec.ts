@@ -8,8 +8,8 @@ describe('ObsWithSharereplayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ObsWithSharereplayComponent ]
-    })
+    imports: [ObsWithSharereplayComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(ObsWithSharereplayComponent);

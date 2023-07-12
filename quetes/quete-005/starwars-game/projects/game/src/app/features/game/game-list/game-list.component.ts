@@ -3,11 +3,15 @@ import { Observable, Subscription, concatMap, switchMap } from 'rxjs';
 import { GameDto } from '../../../core/models/game.dto';
 import { GameService } from '../services/game.service';
 import { SearchService } from '../../../shared/ui/search/services';
+import { GameTableComponent } from '../game-table/game-table.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'game-game-list',
-  templateUrl: './game-list.component.html',
-  styleUrls: ['./game-list.component.css']
+    selector: 'game-game-list',
+    templateUrl: './game-list.component.html',
+    styleUrls: ['./game-list.component.css'],
+    standalone: true,
+    imports: [FormsModule, GameTableComponent]
 })
 export class GameListComponent implements OnInit, OnDestroy {
   private readonly searchService = inject(SearchService);

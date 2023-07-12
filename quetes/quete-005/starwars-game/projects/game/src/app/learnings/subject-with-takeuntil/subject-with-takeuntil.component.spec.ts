@@ -8,8 +8,8 @@ describe('SubjectWithTakeuntilComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SubjectWithTakeuntilComponent ]
-    })
+    imports: [SubjectWithTakeuntilComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(SubjectWithTakeuntilComponent);

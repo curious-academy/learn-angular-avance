@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Observable, shareReplay } from 'rxjs';
 
 @Component({
-  selector: 'game-obs-with-sharereplay',
-  templateUrl: './obs-with-sharereplay.component.html',
-  styleUrls: ['./obs-with-sharereplay.component.css']
+    selector: 'game-obs-with-sharereplay',
+    templateUrl: './obs-with-sharereplay.component.html',
+    styleUrls: ['./obs-with-sharereplay.component.css'],
+    standalone: true
 })
 export class ObsWithSharereplayComponent {
   ngOnInit(): void {

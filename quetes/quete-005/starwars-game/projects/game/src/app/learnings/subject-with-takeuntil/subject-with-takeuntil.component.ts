@@ -3,9 +3,10 @@ import { Subject, from, of } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
-  selector: 'game-subject-with-takeuntil',
-  templateUrl: './subject-with-takeuntil.component.html',
-  styleUrls: ['./subject-with-takeuntil.component.css']
+    selector: 'game-subject-with-takeuntil',
+    templateUrl: './subject-with-takeuntil.component.html',
+    styleUrls: ['./subject-with-takeuntil.component.css'],
+    standalone: true
 })
 export class SubjectWithTakeuntilComponent {
   monObs$ = of([1, 2, 3, 4, 5]);

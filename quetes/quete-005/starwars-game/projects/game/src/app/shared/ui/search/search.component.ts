@@ -5,9 +5,11 @@ import { SearchType } from './models';
 import { SearchService } from './services';
 
 @Component({
-  selector: 'game-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+    selector: 'game-search',
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.css'],
+    standalone: true,
+    imports: [FormsModule]
 })
 export class SearchComponent {
   private readonly searchService = inject(SearchService);
@@ -24,16 +26,4 @@ export class SearchComponent {
   }
 }
 
-@NgModule({
-  declarations: [
-    SearchComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule
-  ],
-  exports: [
-    SearchComponent
-  ]
-})
-export class SearchModule { }
+

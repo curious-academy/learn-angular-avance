@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'game-subject-and-co',
-  templateUrl: './subject-and-co.component.html',
-  styleUrls: ['./subject-and-co.component.css']
+    selector: 'game-subject-and-co',
+    templateUrl: './subject-and-co.component.html',
+    styleUrls: ['./subject-and-co.component.css'],
+    standalone: true
 })
 export class SubjectAndCoComponent {
   subject = new Subject();

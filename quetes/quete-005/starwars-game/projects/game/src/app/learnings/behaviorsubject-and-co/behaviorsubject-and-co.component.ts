@@ -3,9 +3,10 @@ import { BehaviorSubject, from, of } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
-  selector: 'game-behaviorsubject-and-co',
-  templateUrl: './behaviorsubject-and-co.component.html',
-  styleUrls: ['./behaviorsubject-and-co.component.css']
+    selector: 'game-behaviorsubject-and-co',
+    templateUrl: './behaviorsubject-and-co.component.html',
+    styleUrls: ['./behaviorsubject-and-co.component.css'],
+    standalone: true
 })
 export class BehaviorsubjectAndCoComponent {
   subject = new BehaviorSubject<number>(0);
