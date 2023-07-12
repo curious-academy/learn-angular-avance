@@ -1,6 +1,7 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, NgModule, OnInit, inject } from '@angular/core';
 import { SearchType } from '../../ui/search/models';
 import { SearchService } from '../../ui/search/services';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'game-header',
@@ -9,3 +10,12 @@ import { SearchService } from '../../ui/search/services';
 })
 export class HeaderComponent {
 }
+
+@NgModule({
+  declarations: [HeaderComponent],
+  imports: [
+    CommonModule
+  ],
+  exports: [HeaderComponent]
+})
+export class HeaderModule { }

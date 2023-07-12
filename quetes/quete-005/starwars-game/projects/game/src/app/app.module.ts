@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameModule } from './features/game/game.module';
-import { HeaderComponent } from './shared/components/header/header.component';
+import { HeaderComponent, HeaderModule } from './shared/components/header/header.component';
 import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
 import { RappelPromiseComponent } from './learnings/rappel-promise-observable/rappel-promise.component';
 import { FromEventOperatorComponent } from './learnings/from-event-operator/from-event-operator.component';
@@ -14,7 +14,7 @@ import { SubjectAndCoComponent } from './learnings/subject-and-co/subject-and-co
 import { SubjectWithTakeuntilComponent } from './learnings/subject-with-takeuntil/subject-with-takeuntil.component';
 import { BehaviorsubjectAndCoComponent } from './learnings/behaviorsubject-and-co/behaviorsubject-and-co.component';
 import { ObsWithSharereplayComponent } from './learnings/obs-with-sharereplay/obs-with-sharereplay.component';
-import { HeaderModule } from './shared/components/header/header.module';
+import { UserListComponent } from './features/user/user-list/user-list.component';
 // import { SharedModule } from './shared/shared.module';
 
 
@@ -35,7 +35,8 @@ import { HeaderModule } from './shared/components/header/header.module';
     FormsModule,
     HeaderModule,
     GameModule,
-    FromEventOperatorComponent
+    FromEventOperatorComponent,
+    UserListComponent
   ],
   providers: [],
   bootstrap: [AppComponent, HeaderComponent, SideBarComponent]
