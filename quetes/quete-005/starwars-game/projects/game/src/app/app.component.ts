@@ -4,6 +4,7 @@ import { UserListComponent } from './features/user/user-list/user-list.component
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
 import { DiscoverInjectComponent } from './learnings/discover-inject/discover-inject.component';
+import { DiscoverSignalsComponent } from './learnings/discover-signals/discover-signals.component';
 
 @Component({
     selector: 'game-root',
@@ -14,7 +15,6 @@ import { DiscoverInjectComponent } from './learnings/discover-inject/discover-in
       HeaderComponent,
       SideBarComponent,
       UserListComponent,
-      DiscoverInjectComponent,
       RouterOutlet
     ]
 })
