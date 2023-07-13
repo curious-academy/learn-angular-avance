@@ -21,10 +21,12 @@ export class DiscoverInjectComponent implements OnInit {
   private injector = inject(EnvironmentInjector);
 
   ngOnInit(): void {
-    this.injector.runInContext(() => {
-      this.people$ = inject(HttpClient).get<ApiResult>('https://swapi.dev/api/people');
-    });
+    // <=  angular 15
+    // this.injector.runInContext(() => {
+    //   this.people$ = inject(HttpClient).get<ApiResult>('https://swapi.dev/api/people');
+    // });
 
+    // >= angular 16
     runInInjectionContext(this.injector, () => {
       this.people$ = inject(HttpClient).get<ApiResult>('https://swapi.dev/api/people');
     });
