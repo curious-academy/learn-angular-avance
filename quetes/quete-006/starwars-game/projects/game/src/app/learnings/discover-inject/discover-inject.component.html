@@ -1,0 +1,7 @@
+<ng-container *ngIf="people$ | async as peoples">
+  <div *ngFor="let item of peoples.results">
+    {{ item.name }}
+  </div>
+</ng-container>
+
+
