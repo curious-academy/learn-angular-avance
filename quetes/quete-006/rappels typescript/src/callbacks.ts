@@ -1,0 +1,1 @@
+export type Afficher<T> = (message: T) => void;
